@@ -9,9 +9,12 @@ using UnityEngine.UI;
 /// </summary>
 public class GenerateReward : MonoBehaviour
 {
-    public GameObject rewardPrefabs; //奖励预制体,需拖拽
-    private RectTransform contentRect; //滑动框的矩形属性
-    private GridLayoutGroup gridLayoutGroup; //滑动框的排列属性
+    [SerializeField]
+    private Transform rewardPrefabs; //奖励预制体,需拖拽
+    [SerializeField]
+    private RectTransform contentRect; //滑动框的矩形属性,需拖拽
+    [SerializeField]
+    private GridLayoutGroup gridLayoutGroup; //滑动框的排列属性,需拖拽
     private int rewardNumber; //记录此分数下的奖励数
     private float height; //记录一个奖励条和一个间隔的长度
     private int lastScore; //记录上次的分数
@@ -19,8 +22,6 @@ public class GenerateReward : MonoBehaviour
     void Start()
     {
         rewardNumber = 0;
-        contentRect = GetComponent<RectTransform>();
-        gridLayoutGroup = GetComponent<GridLayoutGroup>();
         height = gridLayoutGroup.cellSize.y + gridLayoutGroup.spacing.y; //一个奖励条和一个间隔的长度
     }
 
@@ -41,20 +42,16 @@ public class GenerateReward : MonoBehaviour
     //产生奖励UI
     private void GenerateRewardUI()
     {
-        //记录奖励个数
-        ++rewardNumber;
-        //设置奖励列表长度
-        contentRect.sizeDelta = new Vector2(contentRect.sizeDelta.x, height * rewardNumber);
-        GameObject rewardInfo = Instantiate(rewardPrefabs, transform, false);
-        //设置奖励信息里的分数
-        rewardInfo.transform.GetChild(0).GetComponent<Text>().text = lastScore.ToString();
+        ++rewardNumber; //记录奖励个数
+        contentRect.sizeDelta = new Vector2(contentRect.sizeDelta.x, height * rewardNumber); //设置奖励列表长度
+        Transform rewardInfo = Instantiate(rewardPrefabs, transform, false);
+        rewardInfo.GetChild(0).GetComponent<Text>().text = lastScore.ToString(); //设置奖励信息里的显示分数
     }
 
     //赛季刷新后更新之前的分数记录
     public void UpdateLastScore()
     {
         lastScore = PlayerInfo.score - PlayerInfo.score % 200; //更新分数记录为上一个能产生奖励的数
-        rewardNumber = (PlayerInfo.score - 4000) / 200
-                       - (PlayerInfo.score - 4000) / 1000; //计算奖励条个数
+        rewardNumber = (PlayerInfo.score - 4000) / 200 - (PlayerInfo.score - 4000) / 1000; //计算奖励条个数
     }
 }

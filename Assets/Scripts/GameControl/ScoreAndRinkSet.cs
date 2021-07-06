@@ -9,15 +9,17 @@ using UnityEngine.UI;
 /// </summary>
 public class ScoreAndRinkSet : MonoBehaviour
 {
-    public Text scoreText; //分数文本,需拖拽
-    public Text rankText; //段位文本,需拖拽
-    private RectTransform scoreTextRect; //分数文本的矩形属性
+    [SerializeField]
+    private Text scoreText; //分数文本,需拖拽
+    [SerializeField]
+    private Text rankText; //段位文本,需拖拽
+    [SerializeField]
+    private RectTransform scoreTextRect; //分数文本的矩形属性,需拖拽
     private int rankLevel; //段位
 
     void Start()
     {
         rankText.gameObject.SetActive(false); //初始时隐藏段位文本
-        scoreTextRect = scoreText.GetComponent<RectTransform>();
         rankLevel = 0;
     }
 

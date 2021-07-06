@@ -1608,8 +1608,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 548cda044c68b4367a1bb34cc7d6a8dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rewardPrefabs: {fileID: 2508592822395029541, guid: a2d370578d2124fb1946be793a08e287,
+  rewardPrefabs: {fileID: 2508592822395029540, guid: a2d370578d2124fb1946be793a08e287,
     type: 3}
+  contentRect: {fileID: 1173596487}
+  gridLayoutGroup: {fileID: 1173596488}
 --- !u!1 &1279771902
 GameObject:
   m_ObjectHideFlags: 0
@@ -2328,6 +2330,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreText: {fileID: 1893985188}
   rankText: {fileID: 160555275}
+  scoreTextRect: {fileID: 1893985187}
 --- !u!114 &1967620321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2341,7 +2344,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   content: {fileID: 1173596487}
-  rewardNumber: 0
 --- !u!114 &1967620322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2354,7 +2356,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da0ee723377444cd18aba23b8758e7ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  contentImage: {fileID: 1173596486}
+  contentImage: {fileID: 1173596489}
 --- !u!1 &1985546029
 GameObject:
   m_ObjectHideFlags: 0

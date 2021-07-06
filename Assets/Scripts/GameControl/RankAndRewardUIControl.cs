@@ -5,28 +5,29 @@
 /// </summary>
 public class RankAndRewardUIControl : MonoBehaviour
 {
-    public GameObject viewImage; //信息的背景图片
+    [SerializeField]
+    private GameObject viewImage; //显示段位和分数信息的背景图片
     
     void Start()
     {
-        viewImage.gameObject.SetActive(false);
+        viewImage.SetActive(false);
     }
 
-    //显示单位、分数界面
+    //显示段位、分数界面
     public void ShowRankInfoUI()
     {
-        if (viewImage.gameObject.activeSelf == false)
+        if (viewImage.activeSelf == false)
         {
-            viewImage.gameObject.SetActive(true);
+            viewImage.SetActive(true);
         }
     }
     
-    //隐藏单位、分数界面
+    //隐藏段位、分数界面
     public void CloseRankInfoUI( )
     {
-        if (viewImage.gameObject.activeSelf == true)
+        if (viewImage.activeSelf == true)
         {
-            viewImage.gameObject.SetActive(false);
+            viewImage.SetActive(false);
         }
     }
 }

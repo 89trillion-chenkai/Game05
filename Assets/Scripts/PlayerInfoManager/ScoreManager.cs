@@ -7,7 +7,8 @@ using UnityEngine;
 /// </summary>
 public class ScoreManager : MonoBehaviour
 {
-    public GameObject contentImage; //奖励生成的父物体，需拖拽
+    [SerializeField]
+    private GenerateReward contentImage; //奖励生成的父物体的脚本，需拖拽
 
     //加分按钮绑定函数
     public void AddScoreButton()
@@ -25,7 +26,7 @@ public class ScoreManager : MonoBehaviour
 
             if (PlayerInfo.score >= 4200)
             {
-                contentImage.GetComponent<GenerateReward>().IfGenerateReward(); //刷新奖励
+                contentImage.IfGenerateReward(); //刷新奖励
             }
         }
     }

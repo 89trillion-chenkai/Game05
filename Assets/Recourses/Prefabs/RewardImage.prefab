@@ -89,7 +89,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49d34b828d1d74b8eabc199808eeafe1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonFlag: 0
+  buttonImage: {fileID: 2508592822996280406}
 --- !u!1 &2508592822996280401
 GameObject:
   m_ObjectHideFlags: 0
@@ -188,8 +188,8 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 0.7036274, g: 0.8679245, b: 0.6509434, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.3773585, g: 0.3542186, b: 0.3542186, a: 1}
+    m_PressedColor: {r: 0.9716981, g: 0.9716981, b: 0.9716981, a: 1}
+    m_SelectedColor: {r: 0.9716981, g: 0.93961376, b: 0.93961376, a: 1}
     m_DisabledColor: {r: 0.9622642, g: 0.9395693, b: 0.9395693, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
