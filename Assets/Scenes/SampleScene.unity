@@ -2316,6 +2316,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37378b44cd592473791b8562f81d660b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  contentImage: {fileID: 1173596489}
+  scoreAndRinkSet: {fileID: 1967620320}
 --- !u!114 &1967620320
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2356,7 +2358,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da0ee723377444cd18aba23b8758e7ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  contentImage: {fileID: 1173596489}
 --- !u!1 &1985546029
 GameObject:
   m_ObjectHideFlags: 0

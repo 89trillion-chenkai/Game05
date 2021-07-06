@@ -28,9 +28,9 @@ public class GenerateReward : MonoBehaviour
     //判断是否产生奖励
     public void IfGenerateReward()
     {
-        if (PlayerInfo.score - lastScore >= 200) //与上次分数相差大于或等于200则更新
+        if (PlayerInfoManager.score - lastScore >= 200) //与上次分数相差大于或等于200则更新
         {
-            lastScore = PlayerInfo.score - PlayerInfo.score % 200; //更新分数记录为上一个能产生奖励的数
+            lastScore = PlayerInfoManager.score - PlayerInfoManager.score % 200; //更新分数记录为上一个能产生奖励的数
 
             if (lastScore % 1000 != 0) //不为整千则产生
             {
@@ -51,7 +51,7 @@ public class GenerateReward : MonoBehaviour
     //赛季刷新后更新之前的分数记录
     public void UpdateLastScore()
     {
-        lastScore = PlayerInfo.score - PlayerInfo.score % 200; //更新分数记录为上一个能产生奖励的数
-        rewardNumber = (PlayerInfo.score - 4000) / 200 - (PlayerInfo.score - 4000) / 1000; //计算奖励条个数
+        lastScore = PlayerInfoManager.score - PlayerInfoManager.score % 200; //更新分数记录为上一个能产生奖励的数
+        rewardNumber = (PlayerInfoManager.score - 4000) / 200 - (PlayerInfoManager.score - 4000) / 1000; //计算奖励条个数
     }
 }

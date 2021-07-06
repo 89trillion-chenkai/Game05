@@ -26,7 +26,7 @@ public class ScoreAndRinkSet : MonoBehaviour
     //设置段位信息
     public void SetScoreAndRank()
     {
-        int newScore = PlayerInfo.score; //记录分数
+        int newScore = PlayerInfoManager.score; //记录分数
         scoreText.text = newScore.ToString(); //更新显示分数
 
         if (newScore < 4000) //只显示分数文本，分数文本居中

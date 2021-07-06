@@ -15,9 +15,9 @@ public class GameRefresh : MonoBehaviour
     //赛季刷新按钮绑定函数
     public void GameRefreshButton()
     {
-        if (PlayerInfo.score > 4000)
+        if (PlayerInfoManager.score > 4000)
         {
-            PlayerInfo.score = (PlayerInfo.score - 4000) / 2 + 4000; //计算刷新分数
+            PlayerInfoManager.score = (PlayerInfoManager.score - 4000) / 2 + 4000; //计算刷新分数
             GetComponent<ScoreAndRinkSet>().SetScoreAndRank(); //刷新分数和段位显示
             content.GetComponent<GenerateReward>().UpdateLastScore(); //更新此脚本里的LastScore
             RefreshReward(); //刷新奖励
@@ -29,7 +29,7 @@ public class GameRefresh : MonoBehaviour
     {
         int childCount = content.childCount; //获取之前已经生成的奖励数量
         //计算此时应有奖励的个数
-        rewardNumber = (PlayerInfo.score - 4000) / 200 - (PlayerInfo.score - 4000) / 1000;
+        rewardNumber = (PlayerInfoManager.score - 4000) / 200 - (PlayerInfoManager.score - 4000) / 1000;
 
         for (int i = childCount -1; i >= rewardNumber; i--)
         {
@@ -38,7 +38,7 @@ public class GameRefresh : MonoBehaviour
         
         for (int i = 0; i < content.childCount; i++) //重置还存在的所有奖励领取按钮的状态
         {
-            content.GetChild(i).GetComponent<rewardButtonManager>().RevertCoinButton(); //重制按钮状态
+            content.GetChild(i).GetComponent<RewardButtonManager>().RevertCoinButton(); //重制按钮状态
         }
     }
 }

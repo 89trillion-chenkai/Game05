@@ -6,7 +6,7 @@ using UnityEngine.UI;
 /// <summary>
 /// 管理奖励按钮
 /// </summary>
-public class rewardButtonManager : MonoBehaviour
+public class RewardButtonManager : MonoBehaviour
 {
     [SerializeField] 
     private Image buttonImage; //按钮的图片
@@ -17,7 +17,7 @@ public class rewardButtonManager : MonoBehaviour
     {
         if (buttonFlag == false)
         {
-            PlayerInfo.coinNumber += 100;
+            PlayerInfoManager.coinNumber += 100;
             buttonFlag = true; //标记更新，避免重复点击
             buttonImage.color = Color.gray; //让按钮变色
         }

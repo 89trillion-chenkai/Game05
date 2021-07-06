@@ -14,9 +14,9 @@
 ｜  ｜  ｜——ScoreAndRinkSet            #分数和段位设置
 ｜  ｜   
 ｜  ｜——PlayerInfoManager             #玩家信息管理
-｜     ｜——CoinsManager               #金币管理
-｜     ｜——PlayerInfo                 #玩家信息
-｜     ｜——ScoreManager               #分数管理
+｜     ｜——RewardButtonManager        #奖励领取管理
+｜     ｜——PlayerInfoManager          #玩家信息
+｜                    
 ```
 ## 3.代码逻辑
 
