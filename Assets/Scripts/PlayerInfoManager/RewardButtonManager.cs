@@ -8,8 +8,7 @@ using UnityEngine.UI;
 /// </summary>
 public class RewardButtonManager : MonoBehaviour
 {
-    [SerializeField] 
-    private Image buttonImage; //按钮的图片
+    [SerializeField] private Image buttonImage; //按钮的图片，需拖拽
     private bool buttonFlag; //是否点击标记
     
     //领取金币奖励按钮绑定函数
@@ -23,7 +22,7 @@ public class RewardButtonManager : MonoBehaviour
         }
     }
 
-    //初始化按钮
+    //初始化按钮状态
     public void RevertCoinButton()
     {
         buttonFlag = false; //标记状态恢复

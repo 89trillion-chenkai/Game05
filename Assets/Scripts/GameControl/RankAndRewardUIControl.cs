@@ -5,8 +5,7 @@
 /// </summary>
 public class RankAndRewardUIControl : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject viewImage; //显示段位和分数信息的背景图片
+    [SerializeField] private GameObject viewImage; //显示段位和分数信息的背景图片
     
     void Start()
     {

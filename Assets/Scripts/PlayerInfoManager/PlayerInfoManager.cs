@@ -9,10 +9,8 @@ public class PlayerInfoManager : MonoBehaviour
 {
     public static int score; //玩家分数成绩
     public static int coinNumber; //玩家金币数量
-    [SerializeField]
-    private GenerateReward contentImage; //奖励生成的的脚本，需拖拽
-    [SerializeField] 
-    private ScoreAndRinkSet scoreAndRinkSet; //设置成绩和段位脚本
+    [SerializeField] private GenerateReward contentImage; //奖励生成的的脚本，需拖拽
+    [SerializeField] private ScoreAndRinkSet scoreAndRinkSet; //设置成绩和段位脚本
 
     void Start()
     {

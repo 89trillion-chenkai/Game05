@@ -9,12 +9,9 @@ using UnityEngine.UI;
 /// </summary>
 public class ScoreAndRinkSet : MonoBehaviour
 {
-    [SerializeField]
-    private Text scoreText; //分数文本,需拖拽
-    [SerializeField]
-    private Text rankText; //段位文本,需拖拽
-    [SerializeField]
-    private RectTransform scoreTextRect; //分数文本的矩形属性,需拖拽
+    [SerializeField] private Text scoreText; //分数文本,需拖拽
+    [SerializeField] private Text rankText; //段位文本,需拖拽
+    [SerializeField] private RectTransform scoreTextRect; //分数文本的矩形属性,需拖拽
     private int rankLevel; //段位
 
     void Start()
