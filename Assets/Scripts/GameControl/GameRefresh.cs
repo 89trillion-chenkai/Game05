@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 /// <summary>
 /// 赛季刷新
@@ -11,12 +12,16 @@ public class GameRefresh : MonoBehaviour
     [SerializeField] private Transform content; //奖励生成的父物体，需拖拽
     [SerializeField] private ScoreAndRinkSet scoreAndRinkSet; //刷新分数和段位所在的脚本，需拖拽
     [SerializeField] private GenerateReward generateReward; //需调用脚本里的LastScore，需拖拽
+    [SerializeField] private Text txtGameRefreshNumber; //当前的赛季数文本，需拖拽
     private int rewardNumber; //奖励数
     private Vector3 contentPosition; //存储滑动框初始位置
+    private int gameRefreshNumber; //赛季刷新次数
 
     void Start()
     {
         contentPosition = content.position; //记录滑动框初始位置
+        gameRefreshNumber = 1;
+        txtGameRefreshNumber.text = gameRefreshNumber.ToString(); //初始时显示界面上的赛季数
     }
 
     //赛季刷新按钮绑定函数
@@ -30,6 +35,9 @@ public class GameRefresh : MonoBehaviour
             RefreshReward(); //刷新奖励
             content.position = contentPosition; //滑动框回到初始位置
         }
+
+        gameRefreshNumber++; //赛季刷新次数加一
+        txtGameRefreshNumber.text = gameRefreshNumber.ToString(); //更新界面上的赛季数
     }
     
     //赛季刷新时刷新奖励
